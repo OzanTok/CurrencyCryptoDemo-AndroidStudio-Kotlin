@@ -1,5 +1,6 @@
 package com.ozantok3.currencycryptodem
 
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.support.v4.content.ContextCompat
@@ -26,6 +27,7 @@ class DetailActivity : BaseActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
         Log.i("DetailActivity", "Symbol $symbol")
@@ -44,7 +46,7 @@ class DetailActivity : BaseActivity() {
         activityDetail_textView_percentChange24h.text = symbol?.percentChange24h?.decimalFormatter()
         activityDetail_textView_percentChange7d.text = symbol?.percentChange7d?.decimalFormatter()
         activityDetail_textView_lastUpdate.text = symbol?.lastUpdate?.dateFormatter()
-
+        activityDetails_imageView_cryptoImage.setImageDrawable(imageResource(activityDetail_textView_symbol.text.toString()))
         if (symbol?.percentChange24h.toString().startsWith("-")) {
             activityDetail_textView_percentChange24h.setTextColor(
                 ContextCompat.getColor(
@@ -91,6 +93,37 @@ class DetailActivity : BaseActivity() {
                     android.R.color.holo_green_dark
                 )
             )
+        }
+
+      /*  fun imageResource(symbol: String): Drawable {
+            val sym = symbol.toLowerCase()
+            val uri = "@drawable/icon_$sym"
+            val imgResource = this.resources.getIdentifier(uri, null, this.packageName)
+
+            try {
+                val res = this.resources.getDrawable(imgResource, null)
+                return res
+            } catch (e: Exception) {
+                val uri2 = "@drawable/icon_"
+                val imgResource2 = this.resources.getIdentifier(uri2, null, this.packageName)
+                return this.resources.getDrawable(imgResource2, null)
+            }
+        }*/
+    }
+
+
+    private fun imageResource(symbol: String): Drawable {
+        val sym = symbol.toLowerCase()
+        val uri = "@drawable/icon_$sym"
+        val imgResource = this.resources.getIdentifier(uri, null, this.packageName)
+
+        try {
+            val res = this.resources.getDrawable(imgResource, null)
+            return res
+        } catch (e: Exception) {
+            val uri2 = "@drawable/icon_"
+            val imgResource2 = this.resources.getIdentifier(uri2, null, this.packageName)
+            return this.resources.getDrawable(imgResource2, null)
         }
     }
 

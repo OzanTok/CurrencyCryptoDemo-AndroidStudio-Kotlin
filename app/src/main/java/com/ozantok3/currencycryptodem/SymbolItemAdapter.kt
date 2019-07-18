@@ -114,8 +114,9 @@ class SymbolItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         } else {
             view.background = trans
         }
-        trans.startTransition(400)
-        trans.reverseTransition(400)
+        trans.startTransition(300)
+        trans.reverseTransition(300)
     }
+
 }
 
