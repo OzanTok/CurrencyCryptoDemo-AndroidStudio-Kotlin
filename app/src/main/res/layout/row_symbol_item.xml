@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/colorPrimaryDark"
+>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical"
+            android:paddingRight="10dp"
+            android:orientation="horizontal">
+
+        <LinearLayout android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="0.30"
+                      android:orientation="vertical"
+        >
+
+            <ImageView
+                    android:id="@+id/rowSymbolItem_imageView_change"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/fix20"/>
+
+        </LinearLayout>
+        <LinearLayout android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="1"
+                      android:orientation="vertical"
+                      >
+
+            <TextView
+                    android:id="@+id/rowSymbolItem_textView_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    tools:text="BTC"/>
+
+            <TextView
+                    android:id="@+id/rowSymbolItem_textView_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:textColor="@android:color/white"
+                    tools:text="BTC"/>
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="1"
+                      android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/rowSymbolItem_textView_priceInUsd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:gravity="right"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    tools:text="BTC"/>
+
+            <TextView
+                    android:id="@+id/rowSymbolItem_textView_priceInBtc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:gravity="right"
+                    android:textColor="@android:color/white"
+                    tools:text="BTC"/>
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="1"
+                      android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/rowSymbolItem_textView_percentageChange"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:gravity="right"
+                    android:textColor="@android:color/white"
+                    tools:text="BTC"/>
+
+            <TextView
+                    android:id="@+id/rowSymbolItem_textView_lastUpdateTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:gravity="right"
+                    android:textColor="@android:color/white"
+                    tools:text="BTC"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View android:layout_width="match_parent"
+          android:background="@color/colorView"
+          android:layout_height="1dp"/>
+
+</LinearLayout>
